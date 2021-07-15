@@ -1,0 +1,18 @@
+.footer{
+    position: relative;
+    width: 100%;
+    bottom : 0;
+    left: 0;
+    background: lightgray;
+    color:black;
+    margin-top : '10px';
+}
+
+.footer a {
+    color: black;
+}
+
+.developers {
+    margin: 5px;
+    cursor: pointer;
+}
