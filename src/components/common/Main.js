@@ -9,7 +9,7 @@ const Spacer = styled.div`
 `
 
 const Wrapper = styled(Responsive)`
-    height: 1000px;
+    overflow : auto;
 `; 
 
 const MainImage = styled.div`

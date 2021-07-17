@@ -11,6 +11,7 @@ import TimeTable from './pages/TimeTable';
 import Etc from './pages/Etc';
 import TakeOver from './pages/TakeOver';
 import MyPage from './pages/MyPage';
+import WritePage from './pages/WritePage';
 
 
 const Router = () => {
@@ -27,6 +28,7 @@ const Router = () => {
         <Route component={Etc} path='/etc'/>
         <Route component={TakeOver} path='/takeover'/>
         <Route component={MyPage} path='/mypage'/>
+        <Route component={WritePage} path='/write'/>
         </BrowserRouter>
     );
 };

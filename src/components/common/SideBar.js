@@ -13,10 +13,13 @@ const Wrapper = styled.div`
 
 const WriteButton = styled(Button)`
     width : 100%;
-    margin-top : 10px;
     height : 48px;
-    margin-bottom : 10px;
     background-color : lightgray;
+    text-decoration : none;
+    display : block;
+    padding : 0;
+    line-height : 48px;
+
 `
 
 const SideBar = () => {
@@ -24,7 +27,7 @@ const SideBar = () => {
         <>
         <Wrapper>
             <Profile/>
-            <WriteButton>게시글 작성하기</WriteButton>
+            <WriteButton to='/write'>게시글 작성하기</WriteButton>
             <Search></Search>
             <TagList/>
         </Wrapper>

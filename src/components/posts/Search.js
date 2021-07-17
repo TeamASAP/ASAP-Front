@@ -32,7 +32,7 @@ const Search = () => {
         <>
         <SearchDiv>
             <SearchImage/>
-            <SearchBox placeholder="태그 검색"></SearchBox>
+            <SearchBox placeholder="게시물 검색"></SearchBox>
         </SearchDiv>
         </>
     );

@@ -7,6 +7,7 @@ const ProfileDiv = styled.div`
     height : 200px;
     text-align : center;
     background-color : lightgray;
+    margin-bottom : 10px;
 `
 
 const ProfileHeader = styled.div`

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Responsive from '../common/Responsive';
-import Button from '../common/Button';
+//import Button from '../common/Button';
 
 const Wrapper = styled(Responsive)`
   width : 795px;
@@ -63,11 +63,28 @@ const Form = styled.form`
   display : inline-block;
 `;
 
-const FormButton = styled(Button)`
+const DisableFormButton = styled.button`
   width: 327px;
   height: 48px;
   background-color : lightgray;
   margin-top : 58px;
+  border: none;
+  border-radius: 4px;
+`;
+
+const EnableFormButton = styled.button`
+  width: 327px;
+  height: 48px;
+  background-color : gray;
+  margin-top : 58px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: white;
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 const Message = styled.div`
@@ -89,6 +106,16 @@ const Message = styled.div`
 
 const AuthForm = ({type, onSubmit}) => {
     const text = textMap[type];
+    const [disabled, setDisabled] = useState(true);
+    const onChangeCheckbox = e => {
+      const checked = e.target.checked;
+      if (checked) {
+        setDisabled(false);
+      }
+      else {
+        setDisabled(true);
+      }
+    };
     return (
         <>
         <Wrapper>
@@ -98,7 +125,7 @@ const AuthForm = ({type, onSubmit}) => {
           <Message>
             <p>숙명여자대학교 소프트웨어학부 학생회 일원이 맞으신가요? 회원 가입 후 관리자의 승인을 기다려주세요.</p>
             <span>네 학생회부원이 맞습니다.</span>
-            <input type="checkbox" name="chk"></input>
+            <input type="checkbox" name="chk" onChange={onChangeCheckbox}></input>
           </Message>
           )}
           </LeftDiv>
@@ -152,7 +179,13 @@ const AuthForm = ({type, onSubmit}) => {
               </Select>
             </InputDiv>
           )}
-          <FormButton>{text}</FormButton>
+          {type === 'register' ? 
+          <>
+          {disabled ? <DisableFormButton disabled={disabled}>{text}</DisableFormButton>
+            : <EnableFormButton disabled={disabled}>{text}</EnableFormButton>}
+          </>
+          : <EnableFormButton>{text}</EnableFormButton>
+          }
         </Form>
         </Wrapper>
         </>
