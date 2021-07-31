@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
@@ -18,22 +17,10 @@ const Wrapper = styled.div`
     border-radius: 15px;
 `
 const { REACT_APP_API_KEY, REACT_APP_CALENDAR_ID} = process.env;
-=======
-import styled from 'styled-components';
-
-const FullCalendar = styled.div`
-    background-color : lightgray;
-    width : 900px;
-    height : 700px;
-    margin-left : 25px;
-    float : right;
-`
->>>>>>> 286eba292a40a9d98689f32296a232a86d7dedc5
 
 const Calendar = () => {
     return (
         <>
-<<<<<<< HEAD
         <Wrapper>
         <FullCalendar
         plugins={[ dayGridPlugin, googleCalendarPlugin ]}
@@ -52,11 +39,3 @@ const Calendar = () => {
 }
 
 export default withRouter(Calendar);
-=======
-        <FullCalendar>캘린더</FullCalendar>
-        </>
-    );
-}
-
-export default Calendar
->>>>>>> 286eba292a40a9d98689f32296a232a86d7dedc5
