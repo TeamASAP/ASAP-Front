@@ -52,6 +52,7 @@ const Ul = styled.ul`
     font-size: 16px;
 `
 
+
 const UserInfo = () => {
     //현재 사용자 가져오기
     //user
