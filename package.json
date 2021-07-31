@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@fullcalendar/daygrid": "^5.8.0",
     "@fullcalendar/google-calendar": "^5.8.0",
     "@fullcalendar/react": "^5.8.0",
@@ -10,6 +11,11 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "dotenv": "^10.0.0",
+=======
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+>>>>>>> 286eba292a40a9d98689f32296a232a86d7dedc5
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.9",

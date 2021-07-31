@@ -12,7 +12,10 @@ import Etc from './pages/Etc';
 import TakeOver from './pages/TakeOver';
 import MyPage from './pages/MyPage';
 import WritePage from './pages/WritePage';
+<<<<<<< HEAD
 import Manager from './pages/Manager';
+=======
+>>>>>>> 286eba292a40a9d98689f32296a232a86d7dedc5
 
 
 const Router = () => {
@@ -30,7 +33,10 @@ const Router = () => {
         <Route component={TakeOver} path='/takeover'/>
         <Route component={MyPage} path='/mypage'/>
         <Route component={WritePage} path='/write'/>
+<<<<<<< HEAD
         <Route component={Manager} path='/manager'/>
+=======
+>>>>>>> 286eba292a40a9d98689f32296a232a86d7dedc5
         </BrowserRouter>
     );
 };
