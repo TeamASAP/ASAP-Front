@@ -18,13 +18,13 @@ const MainImage = styled.div`
     margin-bottom : 36px;
 `;
 
-const Main = () => {
+const Main = ({name}) => {
     return (
         <>
         <Spacer/>
         <Wrapper>
             <MainImage>이미지 배너</MainImage>
-            <SideBar/>
+            <SideBar name={name}/>
             <Calendar/>
         </Wrapper>
         <Spacer/>

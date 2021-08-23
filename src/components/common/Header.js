@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 import styled from 'styled-components';
 import Responsive from './Responsive';
@@ -34,13 +34,19 @@ const LinkTo = styled(Link)`
   }
 `
 
-const Header = () => {
+const Header = ( { history } ) => {
+  const onLogout = () => {
+    window.sessionStorage.clear();
+    console.log('logout');
+    history.push('/');
+  }
     return (
         <>
         <HeaderBlock>
             <Wrapper>
             <span className="logo"><LinkTo to="/main">SMSW</LinkTo></span>
             <span className="right">
+              <button onClick={onLogout}>로그아웃</button>
             <Navbar/>
             </span>
             </Wrapper>
@@ -49,4 +55,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withRouter(Header);

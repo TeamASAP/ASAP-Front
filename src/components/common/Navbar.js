@@ -30,7 +30,6 @@ const Navbar = () => {
         <LinkTo to="/budget">예산</LinkTo>
         <LinkTo to="/etc">기타</LinkTo>
         {user === 'manager' && <><LinkTo to="/takeover">인수인계</LinkTo></>}
-        <LinkTo to="/mypage">마이페이지</LinkTo>
         </Wrapper>
         </>
     );

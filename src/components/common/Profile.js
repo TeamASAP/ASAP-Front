@@ -5,10 +5,11 @@ import { withRouter } from 'react-router-dom';
 
 const ProfileDiv = styled.div`
     width : 100%;
-    height : 200px;
+    height : auto;
     text-align : center;
     background-color : lightgray;
     margin-bottom : 10px;
+    padding-bottom : 15px;
 `
 
 const ProfileHeader = styled.div`
@@ -41,9 +42,10 @@ const ProfileButton = styled(Button)`
     }
 `
 
-const Profile = ({ history }) => {
+const Profile = ({ history, name }) => {
     const onLogout = () => {
         //로그아웃 dispatch
+        window.sessionStorage.clear();
         history.push('/');
     };
     function linkto(page) {
@@ -54,11 +56,10 @@ const Profile = ({ history }) => {
         <ProfileDiv>
             <ProfileHeader>프로필</ProfileHeader>
             <Info>
-                <p>이름</p>
-                <p>아이디</p>
+                <p>이름 {name}</p>
                 <p>직급</p>
             </Info>
-            <ProfileButton onClick={()=>linkto('/mypage')}>정보 수정</ProfileButton>
+            <ProfileButton onClick={()=>linkto('/main')}>정보 수정</ProfileButton>
             <ProfileButton onClick={onLogout}>로그아웃</ProfileButton>
         </ProfileDiv>
         </>

@@ -22,11 +22,11 @@ const WriteButton = styled(Button)`
 
 `
 
-const SideBar = () => {
+const SideBar = ({name}) => {
     return (
         <>
         <Wrapper>
-            <Profile/>
+            <Profile name={name}/>
             <WriteButton to='/write'>게시글 작성하기</WriteButton>
             <Search></Search>
             <TagList/>
